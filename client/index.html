@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1 ">
+        <title>Login Successful</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="keywords" content="inventory, appareal, clothes, store, Tabasco, Zacatecas">
+        <meta name="author" content="Daniel Zeh">
+        <style></style>
+    </head>
+
+<body class="container" style="background-color: rgb(255, 241, 244);">
+
+    <nav class="navMenu">
+        <ul>
+            <li><a href="#" id="addInvLink">Add Inventory</a></li>
+            <li><a href="#" id="editInvLink">Look Up/Sell</a></li>
+            <li><a href="#" id="userLink">User Information</a></li>
+            <li><a href="#" id="logOutLink">Log Out</a></li>
+        </ul>
+    </nav>
+    
+    
+    
+    
+    
+    <div class="content" id="addInventoryContent">
+        <h2>Add Inventory</h2>
+        <form id="inventoryForm">
+    
+          <label for="garmetName"> Garmet Name:</label>
+          <input type="text" name="garmetName" id="garmetName_id" placeholder="Name">
+          <br>
+    
+    
+          <label for="size"> Size: </label>
+          <select id="addGarmet-size" name="size" >
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="x-small">X-Small</option>
+            <option value="x-large">X-Large</option>
+            <option value="other">Other/Not Listed</option>
+          </select>
+          <br>
+    
+          <label for="season"> Season: </label>
+          <select id="addGarmet-season" name="season">
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+            <option value="winter">Winter</option>
+            <option value="other">Other</option>
+          </select>
+          <br>
+    
+          <label for="department"> Dept: </label>
+          <select id="addGarmet-dept" name="department">
+            <option value="women">Women</option>
+            <option value="men">Men</option>
+            <option value="girls">Girls</option>
+            <option value="boys">Boys</option>
+            <option value="non-gender">Non-Binary</option>
+            <option value="infant">Infant</option>
+          </select>
+          <br>
+    
+    
+          <label for="selling"> Selling Price: </label>
+          <input type="text" name="selling" id="addGarmet-selling" placeholder="Required" required>
+          <br><br>
+    
+          <label for="purchased"> Purchase Price: </label>
+          <input type="number" name="purchased" id="addGarmet-purchased"  placeholder="Optional"><br>
+    <br>
+          <label for="aquired"> Aquired From: </label>
+          <input type=text" name="aquired" id="addGarmet-aquired" placeholder="Optional"><br>
+    <br>
+          <button type="submit" id="addInvbutton">Add</button>
+        </form>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="content" id="lookInventoryContent">
+        <h2>Inventory Lookup / Sell</h2>
+        <form id="lookupForm">
+    
+            <label for="referenceNum"> Reference Number:</label>
+            <input type="text" name="referenceNum" id="referenceNum" placeholder="***">
+            <br> <br>
+            Or
+            <br><br>
+    
+          <label for="garmetName"> Garmet Name:</label>
+          <input type="text" name="garmetName" id="garmetName_idlookup" placeholder="Name">
+          <br>
+    
+    
+          <label for="size"> Size: </label>
+          <select id="lookupGarmet-size" name="size" >
+            <option value="" selected></option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="x-small">X-Small</option>
+            <option value="x-large">X-Large</option>
+            <option value="other">Other/Not Listed</option>
+          </select>
+          <br>
+    
+          <label for="season"> Season: </label>
+          <select id="lookupGarmet-season" name="season">
+            <option value="" selected></option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+            <option value="winter">Winter</option>
+            <option value="other">Other</option>
+          </select>
+          <br>
+    
+          <label for="department"> Dept: </label>
+          <select id="lookupGarmet-dept" name="department">
+            <option value="" selected></option>
+            <option value="women">Women</option>
+            <option value="men">Men</option>
+            <option value="girls">Girls</option>
+            <option value="boys">Boys</option>
+            <option value="non-gender">Non-Binary</option>
+            <option value="infant">Infant</option>
+          </select>
+          <br>
+    
+    
+          <label for="selling"> Selling Price: </label>
+          <input type="text" name="selling" id="lookupGarmet-selling" placeholder="Optional">
+          <br>
+    
+          <label for="purchased"> Purchase Price: </label>
+          <input type="text" name="purchased" id="lookupGarmet-purchased"  placeholder="Optional"><br>
+    
+          <label for="aquired"> Aquired From: </label>
+          <input type="text" name="aquired" id="lookupGarmet-aquired" placeholder="Optional"><br>
+    <br><br><br>
+          <button type="button" id="searchBtn">Search</button>
+        </form>
+        <br>
+        Or
+        <br><br>
+        <button type="submit" id="allInvLookup"> All Inventory</button>
+    
+    </div>
+    
+    
+
+    
+    
+    <br><br>
+    <div class="employeeInfo">
+        <h2>Employee Information:</h2>
+        Name:
+        <br>
+        ID Number:
+        <br>
+        Contact Number:
+        <br>
+        Number of Items sold this week:
+        <br>
+        Money made this week:
+        <br>
+        Number of Items sold total:
+    
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
